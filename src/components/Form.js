@@ -16,7 +16,7 @@ class Form extends Component {
     ...DEFAULT_STATE
   }
 
-  handleSubmit() {
+  handleSubmit= (event) => {
     event.preventDefault()
     document.getElementById("order-form").reset()
     this.props.addOrder(this.state)
@@ -26,10 +26,10 @@ class Form extends Component {
     })
   }
 
-  handleChange() {
+  handleChange = (event) => {
     const itemType = event.target.name
     const item = event.target.value
-
+    console.log('item', item)
     !this.state[`${itemType}`].includes(item) ?
       this.setState({
         [itemType]: this.state[`${itemType}`].concat(item)
@@ -69,7 +69,7 @@ class Form extends Component {
 
           <br />
 
-          <button className="ui blue big button" type="submit">Submit</button>
+          <button  className="ui blue big button" type="submit">Submit</button>
         </form>
       </div>
     )
