@@ -1,11 +1,22 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-const Side = (props) => {
-  return (
-    <div>
-      { props.sides.join(", ") }
-    </div>
-  )
+class Side extends Component {
+  constructor(props) {
+    super(props)
+    debugger
+  }
+
+  sides = () =>{
+    console.log('idk')
+  }
+
+    render() {
+      return (
+      <div>
+        { this.props.sides.join(", ") }
+      </div>
+    )
+  }
 }
 
-export default Side
+export default Side;
