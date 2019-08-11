@@ -1,13 +1,6 @@
 import React, { Fragment } from 'react'
 
-class SideForm extends React.Component {
-  constructor() {
-    super()
-  }
-
-
-
-  render() {
+const SideForm = (props) => {
   return (
     <Fragment>
       <h1><label htmlFor="sides">Sides</label></h1>
@@ -19,8 +12,8 @@ class SideForm extends React.Component {
               type="checkbox"
               value="Chips"
               name="sides"
-              checked={ this.props.sides.includes('Chips') }
-              onChange={ this.props.handleChange }
+              checked={ props.sides.includes('Chips') }
+              onChange={ props.handleOnChange }
             />
             <img src={ require('../images/sides/chips.png') } height="100px" width="100px" alt="chips" />
             <label htmlFor="chips">Chips</label>
@@ -34,8 +27,8 @@ class SideForm extends React.Component {
               type="checkbox"
               value="Chips & Salsa"
               name="sides"
-              checked={ this.props.sides.includes('Chips & Salsa') }
-              onChange={ this.props.handleChange }
+              checked={ props.sides.includes('Chips & Salsa') }
+              onChange={ props.handleOnChange }
             />
             <img src={ require('../images/sides/chips-salsa.png') } height="100px" width="100px" alt="chips and salsa" />
             <label htmlFor="chips-salsa">Chips & Salsa</label>
@@ -49,8 +42,8 @@ class SideForm extends React.Component {
               type="checkbox"
               value="Chips & Guac"
               name="sides"
-              checked={ this.props.sides.includes('Chips & Guac') }
-              onChange={ this.props.handleChange }
+              checked={ props.sides.includes('Chips & Guac') }
+              onChange={ props.handleOnChange }
             />
             <img src={ require('../images/sides/chips-guac.png') } height="100px" width="100px" alt="chips and guac" />
             <label htmlFor="chips-guac">Chips & Guac</label>
@@ -64,8 +57,8 @@ class SideForm extends React.Component {
               type="checkbox"
               value="Chips & Queso"
               name="sides"
-              checked={ this.props.sides.includes('Chips & Queso') }
-              onChange={ this.props.handleChange }
+              checked={ props.sides.includes('Chips & Queso') }
+              onChange={ props.handleOnChange }
             />
             <img src={ require('../images/sides/chips-queso.png') } height="100px" width="100px" alt="chips and queso" />
             <label htmlFor="chips-queso">Chips & Queso</label>
@@ -79,8 +72,8 @@ class SideForm extends React.Component {
               type="checkbox"
               value="Tortilla"
               name="sides"
-              checked={ this.props.sides.includes('Tortilla') }
-              onChange={ this.props.handleChange }
+              checked={ props.sides.includes('Tortilla') }
+              onChange={ props.handleOnChange }
             />
             <img src={ require('../images/sides/tortilla.png') } height="100px" width="100px" alt="tortilla" />
             <label htmlFor="tortila">Tortilla</label>
@@ -94,8 +87,8 @@ class SideForm extends React.Component {
               type="checkbox"
               value="Taco"
               name="sides"
-              checked={ this.props.sides.includes('Taco') }
-              onChange={ this.props.handleChange }
+              checked={ props.sides.includes('Taco') }
+              onChange={ props.handleOnChange }
             />
             <img src={ require('../images/sides/taco.png') } height="100px" width="100px" alt="taco" />
             <label htmlFor="taco">Taco</label>
@@ -109,8 +102,8 @@ class SideForm extends React.Component {
               type="checkbox"
               value="Fountain Drink"
               name="sides"
-              checked={ this.props.sides.includes('Fountain Drink') }
-              onChange={ this.props.handleChange }
+              checked={ props.sides.includes('Fountain Drink') }
+              onChange={ props.handleOnChange }
             />
             <img src={ require('../images/sides/drink.png') } height="100px" width="100px" alt="fountain drink" />
             <label htmlFor="drink">Fountain Drink</label>
@@ -120,6 +113,6 @@ class SideForm extends React.Component {
     </Fragment>
   )
 }
-}
+
 
 export default SideForm
